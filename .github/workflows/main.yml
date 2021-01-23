@@ -5,6 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         name: A job to execute Packagaya - The monorepo package manager on your own code
         steps:
+            - uses: actions/checkout@v2
             - name: Checks the code for differences
               id: Packagaya
               uses: 'packagaya/gh-action@v2'
