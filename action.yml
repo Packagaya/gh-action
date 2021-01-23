@@ -1,16 +1,6 @@
 # action.yml
 name: 'Packagaya GitHub Action'
 description: 'Runs Packagaya on your repository to analyze the issues in the code.'
-inputs:
-    command: # id of input
-        description: 'The command which should be run'
-        required: false
-        default: 'sync info'
-outputs:
-    time: # id of output
-        description: 'The time we greeted you'
 runs:
     using: 'docker'
     image: 'Dockerfile'
-    env:
-        PACKAGAYA_COMMAND: ${{ inputs.command }}
