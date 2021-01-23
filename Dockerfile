@@ -9,6 +9,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn add -D @packagaya/ts-adapter
+RUN yarn add -W -D @packagaya/ts-adapter
 
 ENTRYPOINT [ "packagaya", "${PACKAGAYA_COMMAND}" ]
