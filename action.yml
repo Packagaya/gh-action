@@ -8,5 +8,5 @@ runs:
           shell: bash
         - run: yarn add -D -W @packagaya/ts-adapter
           shell: bash
-        - run: packagaya sync info
+        - run: $(yarn global bin)/packagaya sync info
           shell: bash
