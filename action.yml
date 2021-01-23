@@ -2,5 +2,11 @@
 name: 'Packagaya GitHub Action'
 description: 'Runs Packagaya on your repository to analyze the issues in the code.'
 runs:
-    using: 'docker'
-    image: 'Dockerfile'
+    using: 'composite'
+    steps:
+        - run: yarn global add @packagaya/cli
+          shell: bash
+        - run: yarn add -D -W @packagaya/ts-adapter
+          shell: bash
+        - run: packagaya sync info
+          shell: bash
