@@ -7,6 +7,6 @@ jobs:
         steps:
             - name: Checks the code for differences
               id: Packagaya
-              uses: '@packagaya/gh-action@v1'
+              uses: 'packagaya/gh-action@v2'
               with:
                   command: 'sync info'
