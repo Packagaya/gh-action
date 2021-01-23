@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+    packagaya:
+        runs-on: ubuntu-latest
+        name: A job to execute Packagaya - The monorepo package manager on your own code
+        steps:
+            - name: Checks the code for differences
+              id: Packagaya
+              uses: '@packagaya/gh-action@v1'
+              with:
+                  command: 'sync info'
